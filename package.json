@@ -1,0 +1,37 @@
+{
+  "name": "copy-paste-library",
+  "version": "1.1.0",
+  "description": "copy and paste",
+  "main": "dist/copy-paste.umd.js",
+  "module": "dist/copy-paste.es.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "build:types": "tsc --emitDeclarationOnly",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ts-jest": "^29.2.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5"
+  },
+  "author": "Je",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^18.3.1"
+  }
+}

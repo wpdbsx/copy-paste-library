@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# Copy-Paste Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 프로젝트 개요
 
-Currently, two official plugins are available:
+`copy-paste-library`는 텍스트를 복사하고 출처를 표시하는 React 컴포넌트를 제공합니다. 이 라이브러리는 사용자가 제공한 텍스트와 출처 정보를 결합하여 클립보드에 복사하는 기능을 구현합니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 설치 방법
 
-## Expanding the ESLint configuration
+### npm을 이용한 설치
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install copy-paste-library
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 사용법
+
+```bash
+import React from 'react';
+import CopyPasteComponent from 'copy-paste-library';
+
+function App() {
+  const text = "이것은 복사될 텍스트입니다.";
+  const source = "출처: OpenAI";
+
+  return (
+    <div>
+      <h1>Copy-Paste Library 데모</h1>
+      <CopyPasteComponent text={text} source={source} />
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+## 라이센스
+
+ISC License
+
+Copyright (c) 2024 Je
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
