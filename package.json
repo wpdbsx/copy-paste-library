@@ -9,6 +9,7 @@
     "dist"
   ],
   "scripts": {
+    "start": "vite",
     "build": "vite build",
     "build:types": "tsc --emitDeclarationOnly",
     "test": "jest"
@@ -18,8 +19,10 @@
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.46.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.1",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
@@ -30,8 +33,5 @@
     "vite": "^5.3.5"
   },
   "author": "Je",
-  "license": "ISC",
-  "dependencies": {
-    "@types/react": "^18.3.1"
-  }
+  "license": "ISC"
 }

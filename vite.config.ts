@@ -4,6 +4,9 @@ import { resolve } from "path";
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    port: 3000, // 포트 3000으로 설정
+  },
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
