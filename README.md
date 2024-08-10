@@ -16,18 +16,29 @@ npm install copy-paste-library
 
 ```bash
 import React from 'react';
-import CopyPasteComponent from 'copy-paste-library';
+import CopyWithSource from './components/CopyWithSource';
 
 function App() {
-  const text = "이것은 복사될 텍스트입니다.";
-  const source = "출처: OpenAI";
+    const customUrl = "https://custom-source-url.com";
 
-  return (
-    <div>
-      <h1>Copy-Paste Library 데모</h1>
-      <CopyPasteComponent text={text} source={source} />
-    </div>
-  );
+    return (
+        <div>
+            <CopyWithSource customSourceUrl={customUrl} >
+                <div>
+                    <h1>출처가 자동으로 추가됩니다.</h1>
+
+                    <p>이 텍스트를 복사하면 지정된 출처가 포함됩니다.</p>
+                </div>
+
+            </CopyWithSource>
+
+
+            <div>
+                복사가 안됩니다
+            </div>
+        </div>
+
+    );
 }
 
 export default App;
